@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biryani Mahal - Authentic Biryani & Pulao</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <i class="fas fa-utensils"></i>
+      <span>Biryani Mahal</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a></li>
+      <li>
+        <a href="#" class="cart-btn" id="cartBtn">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </li>
+    </ul>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="tagline">🌟 Authentic Hyderabadi Taste</span>
+    <h1>India's Best <span>Biryani & Pulao</span> Center</h1>
+    <p>Traditional recipes, aromatic spices, and love in every bite. Order now and taste the difference!</p>
+    <div class="hero-buttons">
+      <a href="#menu" class="btn-primary">Order Now <i class="fas fa-arrow-right"></i></a>
+      <a href="#reviews" class="btn-outline">Read Reviews</a>
+    </div>
+    <div class="hero-stats">
+      <div><h3>25+</h3><p>Dishes</p></div>
+      <div><h3>10K+</h3><p>Happy Customers</p></div>
+      <div><h3>4.8★</h3><p>Rating</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section class="section" id="menu">
+  <div class="container">
+    <h2 class="section-title">Our Signature Menu</h2>
+    <p class="section-subtitle">Choose from our wide range of authentic biryanis & pulaos</p>
+
+    <div class="filter-tabs">
+      <button class="tab-btn active" data-filter="all">All</button>
+      <button class="tab-btn" data-filter="biryani">Biryani</button>
+      <button class="tab-btn" data-filter="pulao">Pulao</button>
+      <button class="tab-btn" data-filter="drinks">Cold Drinks</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- ================= REVIEWS ================= -->
+<section class="section bg-light" id="reviews">
+  <div class="container">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-subtitle">Real reviews from real biryani lovers</p>
+    <div class="reviews-grid" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2 class="section-title">Visit Us</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Location</h4><p>Shop #45, Food Street, Charminar Road, Hyderabad</p></div></div>
+        <div class="contact-item"><i class="fas fa-phone"></i><div><h4>Call Us</h4><p>+91 98765 43210</p></div></div>
+        <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p>order@biryanimahal.com</p></div></div>
+        <div class="contact-item"><i class="fas fa-clock"></i><div><h4>Hours</h4><p>11:00 AM - 11:00 PM (Daily)</p></div></div>
+      </div>
+      <div class="map-box">
+        <i class="fas fa-map-location-dot"></i>
+        <h3>Find Us Here</h3>
+        <p>Delivery available in 5km radius</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3><i class="fas fa-utensils"></i> Biryani Mahal</h3>
+        <p>Authentic Hyderabadi Biryani & Pulao since 2010.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Biryani Mahal. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ================= CART MODAL ================= -->
+<div class="modal" id="cartModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3><i class="fas fa-shopping-cart"></i> Your Order</h3>
+      <span class="close" onclick="closeModal('cartModal')">&times;</span>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-total">
+      <div><span>Subtotal:</span><span id="subtotal">₹0</span></div>
+      <div><span>Delivery:</span><span>₹50</span></div>
+      <div class="grand-total"><span>Total:</span><span id="grandTotal">₹50</span></div>
+    </div>
+    <form id="checkoutForm" onsubmit="placeOrder(event)">
+      <h4>Delivery Details</h4>
+      <input type="text" id="custName" placeholder="Full Name *" required>
+      <input type="tel" id="custPhone" placeholder="Phone Number *" required pattern="[0-9]{10}">
+      <textarea id="custAddress" rows="2" placeholder="Delivery Address *" required></textarea>
+      <select id="paymentMode" required>
+        <option value="">Payment Mode *</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="UPI">UPI / Online</option>
+      </select>
+      <button type="submit" class="btn-primary btn-full">
+        <i class="fas fa-check"></i> Place Order
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ================= ORDER SUCCESS MODAL ================= -->
+<div class="modal" id="successModal">
+  <div class="modal-content success-content">
+    <i class="fas fa-check-circle success-icon"></i>
+    <h2>Order Placed!</h2>
+    <p>Your delicious food is being prepared.</p>
+    <div class="order-id-box">
+      <span>Order ID:</span>
+      <strong id="successOrderId">#0000</strong>
+    </div>
+    <p class="small">Our delivery partner will contact you shortly.</p>
+    <button class="btn-primary btn-full" onclick="closeModal('successModal')">Great!</button>
+  </div>
+</div>
+
+<script src="js/menu.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
